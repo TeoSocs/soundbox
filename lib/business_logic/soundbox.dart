@@ -1,16 +1,18 @@
+import 'package:soundbox/business_logic/entities/node.dart';
+
 abstract class Soundbox {
   /// The path opened in the Soundbox
-  String currentLocation;
+  Node currentLocation;
 
   /// Play the [audio] in the [currentLocation]
-  void play(String audio);
+  void play(Node audio);
 
   /// Stop the currently playing audio
   void stop();
 
   /// List the content of [currentLocation]
-  List<String> get children;
+  List<Node> get children;
 
   /// Change [currentLocation] to [currentLocation]/[target]
-  void goTo(String target);
+  void goTo(Node target);
 }

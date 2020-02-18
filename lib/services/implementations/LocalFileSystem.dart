@@ -1,8 +1,20 @@
-import 'package:path_provider/path_provider.dart';
-import 'package:soundbox/services/FileSystem.dart';
+import 'package:soundbox/business_logic/entities/node.dart';
+import 'package:soundbox/services/PersistenceService.dart';
 
-class LocalFileSystem implements FileSystem {
+class LocalFilesystem implements PersistenceService {
   @override
-  Future<String> get rootPath async =>
-      (await getApplicationDocumentsDirectory()).path;
+  Future<List<Node>> audioIn(Node node) {
+    // TODO: implement audioIn
+    return null;
+  }
+
+  @override
+  Future<List<Node>> folderIn(Node node) {
+    // TODO: implement folderIn
+    return null;
+  }
+
+  @override
+  // TODO: implement rootPath
+  Future<String> get rootPath => null;
 }

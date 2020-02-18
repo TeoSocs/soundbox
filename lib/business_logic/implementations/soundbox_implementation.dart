@@ -1,19 +1,24 @@
+import 'package:soundbox/business_logic/entities/node.dart';
 import 'package:soundbox/business_logic/soundbox.dart';
 
 class SounboxImpl implements Soundbox {
-  String currentLocation;
+  @override
+  Node currentLocation;
 
   @override
-  // TODO: implement children
-  List<String> get children => null;
+  List<Node> get children {
+    // currentLocation should never be a folder. If it is, something is gone seriously wrong.
+    assert(currentLocation.type == NodeType.FOLDER);
+    
+  }
 
   @override
-  void goTo(String target) {
+  void goTo(Node target) {
     // TODO: implement goTo
   }
 
   @override
-  void play(String audio) {
+  void play(Node audio) {
     // TODO: implement play
   }
 
