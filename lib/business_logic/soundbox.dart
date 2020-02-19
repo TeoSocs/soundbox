@@ -11,7 +11,7 @@ abstract class Soundbox {
   void stop();
 
   /// List the content of [currentLocation]
-  List<Node> get children;
+  Future<List<Node>> get children;
 
   /// Change [currentLocation] to [currentLocation]/[target]
   void goTo(Node target);
